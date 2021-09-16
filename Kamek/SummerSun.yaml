@@ -36,4 +36,5 @@ modules:
   - processed/gameScene.yaml
   - processed/bossKamek.yaml
   - processed/bobombhax.yaml
+  - processed/magicplatform.yaml
   
