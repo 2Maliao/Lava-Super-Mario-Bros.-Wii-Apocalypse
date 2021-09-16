@@ -1,0 +1,39 @@
+output_dir: "NewerASM"
+code_address: 0x808D9000
+modules:
+  - processed/prolog.yaml
+  - processed/replay.yaml
+  - processed/growup.yaml
+  - processed/bugfixes.yaml
+  - processed/hardMode.yaml
+  # - processed/summerhax.yaml
+  - processed/effectVideo.yaml
+  - processed/shyguy.yaml
+  - processed/levelspecial.yaml
+  # - processed/spritetex.yaml
+  - processed/spritespawner.yaml
+  - processed/spriteswapper.yaml
+  - processed/eventblock.yaml
+  - processed/eventlooper.yaml
+  - processed/linegod.yaml
+  - processed/tilegod.yaml
+  - processed/soundPlayer.yaml
+  # - processed/worldmap.yaml
+  - processed/mrsun.yaml
+  - processed/poweruphax.yaml
+  # - processed/thundercloud.yaml
+  - processed/topman.yaml
+  - processed/bossMegaGoomba.yaml
+  - processed/bossFuzzyBear.yaml
+  - processed/bossThwompaDomp.yaml
+  - processed/bossRamboo.yaml
+  - processed/bossBalboaWrench.yaml
+  - processed/bossWrenchThrow.yaml
+  # - processed/bossSamurshai.yaml
+  - processed/bossPodouble.yaml
+  - processed/bossTopman.yaml
+  - processed/cutScene.yaml
+  - processed/gameScene.yaml
+  - processed/bossKamek.yaml
+  - processed/bobombhax.yaml
+  

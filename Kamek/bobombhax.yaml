@@ -1,0 +1,31 @@
+---
+#Replaces Actor 555 AC_WATER_BUBBLE_CANNON (Sprite 328)
+
+
+source_files: [../src/bobombhax.cpp]
+hooks:
+
+  - name: GABON_ROCK_replace
+    type: add_func_pointer
+    src_addr_pal: 0x8095C740
+    target_func: 'daGabonRock_c::getsettings()'
+
+  - name: GDisplay_doWait
+    type: add_func_pointer
+    src_addr_pal: 0x80327A58
+    target_func: 'dGameDisplay_c::doWaitCheck()'
+
+  - name: BOMB_replace
+    type: add_func_pointer
+    src_addr_pal: 0x80ADDBA0
+    target_func: 'daEnBomhei_c::newOnCreate()'
+
+  - name: BOMB_PLAYERCOLLISION_replace
+    type: add_func_pointer
+    src_addr_pal: 0x80ADDC90
+    target_func: 'daEnBomhei_c::newPlayerCollision(ActivePhysics*, ActivePhysics*)'
+
+  # - name: HammerRedCircle #This hook was made for testing purposes. Please do not uncomment it
+  #   type: patch
+  #   addr_pal: 0x80A9442C
+  #   data: '38802086'

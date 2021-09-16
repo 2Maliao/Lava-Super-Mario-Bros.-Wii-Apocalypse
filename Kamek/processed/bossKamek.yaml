@@ -1,0 +1,146 @@
+hooks:
+- name: KamekMarioBuild
+  src_addr_jpn: 2157304304
+  src_addr_jpn2: 2157304320
+  src_addr_ntsc: &id001 2157306120
+  src_addr_ntsc2: 2157306136
+  src_addr_pal: *id001
+  src_addr_pal2: 2157306136
+  target_func: daKameckMario_c::build()
+  type: add_func_pointer
+- addr_jpn: 2150673000
+  addr_jpn2: 2150673000
+  addr_ntsc: 2150673480
+  addr_ntsc2: 2150673480
+  addr_pal: &id002 2150674248
+  addr_pal2: *id002
+  data: 0149 0000  00000008 FFFFFFF0  00000000 00000010 000000FF 00000010  0000 0000
+    0000 0000  0000 0000
+  name: UpdateKamekMarioSpriteInfo
+  type: patch
+- name: KamekMagicBulletBuild
+  src_addr_jpn: 2157257344
+  src_addr_jpn2: 2157257360
+  src_addr_ntsc: &id003 2157259160
+  src_addr_ntsc2: 2157259176
+  src_addr_pal: *id003
+  src_addr_pal2: 2157259176
+  target_func: daKameckMagicBullet_c::build()
+  type: add_func_pointer
+- name: KamekMagicBulletSpriteFileInfo
+  src_addr_jpn: 2150738456
+  src_addr_jpn2: 2150738456
+  src_addr_ntsc: 2150738936
+  src_addr_ntsc2: 2150738936
+  src_addr_pal: &id004 2150739728
+  src_addr_pal2: *id004
+  target_func: KMBarcNameList
+  type: add_func_pointer
+- name: KAMEK_MAGIC_test
+  src_addr_jpn: 2157319640
+  src_addr_jpn2: 2157319656
+  src_addr_ntsc: &id005 2157321456
+  src_addr_ntsc2: 2157321472
+  src_addr_pal: *id005
+  src_addr_pal2: 2157321472
+  target_func: daKameckMagic_c::getsettings()
+  type: add_func_pointer
+- branch_type: b
+  name: ChangeWaitState_Begin
+  src_addr_jpn: 2155986080
+  src_addr_jpn2: 2155986096
+  src_addr_ntsc: &id006 2155986704
+  src_addr_ntsc2: 2155986720
+  src_addr_pal: *id006
+  src_addr_pal2: 2155986720
+  target_func: daKameckMagic_c::newMoveBegin()
+  type: branch_insn
+- branch_type: b
+  name: ChangeWaitState_Execute
+  src_addr_jpn: 2155986096
+  src_addr_jpn2: 2155986112
+  src_addr_ntsc: &id007 2155986720
+  src_addr_ntsc2: 2155986736
+  src_addr_pal: *id007
+  src_addr_pal2: 2155986736
+  target_func: daKameckMagic_c::newMoveExecute()
+  type: branch_insn
+- name: BossKamekBuild
+  src_addr_jpn: 2159061392
+  src_addr_jpn2: 2159061424
+  src_addr_ntsc: 2159063216
+  src_addr_ntsc2: 2159063248
+  src_addr_pal: 2159063184
+  src_addr_pal2: 2159063216
+  target_func: daBossKameck_c::build()
+  type: add_func_pointer
+- name: BossKamekSpriteFileInfo
+  src_addr_jpn: 2150739152
+  src_addr_jpn2: 2150739152
+  src_addr_ntsc: 2150739632
+  src_addr_ntsc2: 2150739632
+  src_addr_pal: &id008 2150740424
+  src_addr_pal2: *id008
+  target_func: KMarcNameList
+  type: add_func_pointer
+- addr_jpn: 2150686520
+  addr_jpn2: 2150686520
+  addr_ntsc: 2150687000
+  addr_ntsc2: 2150687000
+  addr_pal: &id009 2150687768
+  addr_pal2: *id009
+  data: 0147 0000  00000008 FFFFFFF0  00000000 00000010 000000FF 00000010  0000 0000
+    0000 0000  0000 0000
+  name: UpdateBossKamekSpriteInfo
+  type: patch
+- name: KAMEK_kill
+  src_addr_jpn: 2159526924
+  src_addr_jpn2: 2159526956
+  src_addr_ntsc: 2159528748
+  src_addr_ntsc2: 2159528780
+  src_addr_pal: 2159528716
+  src_addr_pal2: 2159528748
+  target_func: daBossKameckDemo_c::newOnExecute()
+  type: add_func_pointer
+- name: KamekGiantBuild
+  src_addr_jpn: 2159030040
+  src_addr_jpn2: 2159030072
+  src_addr_ntsc: 2159031864
+  src_addr_ntsc2: 2159031896
+  src_addr_pal: 2159031832
+  src_addr_pal2: 2159031864
+  target_func: daBossKameckGiant_c::build()
+  type: add_func_pointer
+- name: KamekGiantSpriteFileInfo
+  src_addr_jpn: 2150737956
+  src_addr_jpn2: 2150737956
+  src_addr_ntsc: 2150738436
+  src_addr_ntsc2: 2150738436
+  src_addr_pal: &id010 2150739228
+  src_addr_pal2: *id010
+  target_func: KMGarcNameList
+  type: add_func_pointer
+- addr_jpn: 2150674560
+  addr_jpn2: 2150674560
+  addr_ntsc: 2150675040
+  addr_ntsc2: 2150675040
+  addr_pal: &id011 2150675808
+  addr_pal2: *id011
+  data: 00A2 0000  00000008 FFFFFFF0  00000000 00000010 00000FFF 00000FFF  0000 0000
+    0000 0000  0000 0000
+  name: UpdateKamekGiantSpriteInfo
+  type: patch
+- name: EN_BUBBLE_kill
+  src_addr_jpn: 2158881096
+  src_addr_jpn2: 2158881128
+  src_addr_ntsc: 2158882920
+  src_addr_ntsc2: 2158882952
+  src_addr_pal: 2158882888
+  src_addr_pal2: 2158882920
+  target_func: EN_BUBBLE::newOnExecute()
+  type: add_func_pointer
+source_files:
+- ../src/bossKamekMario.cpp
+- ../src/bossKamekMagicBullet.cpp
+- ../src/bossKamekMain.cpp
+- ../src/bossKamekGiant.cpp
